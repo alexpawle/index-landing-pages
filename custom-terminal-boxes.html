@@ -45,9 +45,9 @@
   /* ── NAV ──────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(0, 53, 95, 0.97);
+    background: var(--white);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid var(--rule);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 2rem; height: 64px;
   }
@@ -58,9 +58,9 @@
 
   .nav-phone {
     font-size: 0.875rem; font-weight: 500;
-    color: rgba(255,255,255,0.75);
+    color: var(--mute);
   }
-  .nav-phone strong { color: var(--white); }
+  .nav-phone strong { color: var(--ink); }
 
   .nav-btn {
     background: var(--brand-red); color: var(--white);
