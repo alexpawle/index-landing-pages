@@ -52,19 +52,7 @@
     padding: 0 2rem; height: 64px;
   }
 
-  .logo {
-    font-family: var(--sans);
-    font-weight: 700; font-size: 1.25rem;
-    letter-spacing: -0.01em; color: var(--white);
-  }
-  .logo span { color: var(--brand-red); }
-
-  .logo-sub {
-    font-size: 0.6rem; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(255,255,255,0.45); display: block;
-    margin-top: 1px;
-  }
+  .nav-logo img { height: 36px; width: auto; display: block; }
 
   .nav-right { display: flex; align-items: center; gap: 1.5rem; }
 
@@ -604,13 +592,12 @@
 
 <!-- NAV -->
 <nav>
-  <div>
-    <div class="logo">ind<span>Ex</span></div>
-    <span class="logo-sub">Custom Electrical Enclosures</span>
-  </div>
+  <a href="https://www.indexenclosures.com" class="nav-logo">
+    <img src="images/index-logo.webp" alt="indEx Enclosures" width="120" height="36">
+  </a>
   <div class="nav-right">
-    <span class="nav-phone"><strong>+44 1233 801 890</strong> — Mon–Fri 8am–5pm</span>
-    <a href="#quote" class="nav-btn">Get a Quote</a>
+    <span class="nav-phone"><strong>+44 1233 801 890</strong> Mon–Fri 8am–5pm</span>
+    <a href="tel:+441233801890" class="nav-btn">Call Us</a>
   </div>
 </nav>
 
@@ -620,7 +607,7 @@
     <div>
       <div class="eyebrow">
         <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"/></svg>
-        UK Manufacturer — Ashford, Kent
+        UK Manufacturer, Ashford, Kent
       </div>
       <h1>Custom Terminal Boxes.<br><em>Built to Your Exact Spec.</em></h1>
       <p class="hero-sub">Steel, stainless steel, GRP and ATEX-certified terminal boxes manufactured to your drawing or specification. Quote within 24 hours. Delivered in 15 working days.</p>
@@ -630,7 +617,7 @@
           <div class="tick-icon">
             <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#3fcf8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          Send us your drawing — we quote within 24 hours
+          Send us your drawing and we quote within 24 hours
         </div>
         <div class="tick-item">
           <div class="tick-icon">
@@ -642,7 +629,7 @@
           <div class="tick-icon">
             <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#3fcf8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          ATEX-certified variants — Zone 1, Zone 2, Zone 21, Zone 22
+          ATEX-certified variants: Zone 1, Zone 2, Zone 21, Zone 22
         </div>
         <div class="tick-item">
           <div class="tick-icon">
@@ -654,85 +641,43 @@
 
       <div class="hero-ctas">
         <a href="#quote" class="btn-primary">Submit Your Spec</a>
-        <a href="#mark" class="btn-ghost">Speak to an Engineer</a>
+        <a href="tel:+441233801890" class="btn-ghost">Call +44 1233 801 890</a>
       </div>
     </div>
 
-    <!-- QUOTE FORM -->
-    <div class="quote-card" id="quote">
-      <div class="qc-header">
-        <div class="qc-title">Get a quote — 24hr turnaround</div>
-        <div class="qc-sub">Send your spec or drawing and we'll come back with a price and lead time.</div>
-      </div>
+    <!-- MARK FORM -->
+    <div id="quote">
+      <div class="section-tag" style="color: rgba(255,255,255,0.45); margin-bottom: 0.75rem;">Not sure what you need?</div>
+      <h2 style="color: var(--white); margin-bottom: 1.5rem;">Send Mark your spec.<br>He'll review it free.</h2>
 
-      <form id="quote-form" action="https://formspree.io/f/xeenyjjb" method="POST">
-        <input type="hidden" name="_subject" value="Custom Terminal Box Quote Request">
-        <input type="hidden" name="_replyto" value="">
-
-        <div class="form-row">
-          <div class="fg">
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first_name" placeholder="Alex" required>
+      <div class="mark-card">
+        <div class="mark-profile">
+          <div class="mark-avatar">
+            <img src="images/mark-popple.webp"
+                 alt="Mark Popple, Terminal Box and ATEX Enclosure Specialist"
+                 width="80" height="80">
           </div>
-          <div class="fg">
-            <label for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+          <div>
+            <div class="mark-name">Mark Popple</div>
+            <div class="mark-title">Group Operations Director<br>Terminal Box &amp; ATEX Enclosure Specialist</div>
           </div>
         </div>
 
-        <div class="fg">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Your company" required>
+        <div class="mark-quote">"Nine times out of ten, the spec is fine and we can quote straight from it. But when something looks marginal, it's much better to catch it before manufacture than after."</div>
+
+        <form id="mark-form" action="https://formspree.io/f/xeenyjjb" method="POST" class="mark-form">
+          <input type="hidden" name="_subject" value="Spec Review Request">
+          <input type="email" name="email" class="mark-input" placeholder="Your email address" required>
+          <input type="tel" name="phone" class="mark-input" placeholder="Phone number (optional)">
+          <textarea name="spec_details" class="mark-input" rows="3" placeholder="Brief description of what you need (or attach a drawing by email after submitting)"></textarea>
+          <button type="submit" class="mark-submit">Send Mark My Spec</button>
+          <p class="mark-note">Reviewed within 24 hours on working days. No obligation.</p>
+        </form>
+
+        <div class="form-success" id="mark-success">
+          <h4>Spec request sent</h4>
+          <p>Mark will review it and come back to you within 24 hours on working days.</p>
         </div>
-
-        <div class="fg">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="alex@company.com" required>
-        </div>
-
-        <div class="fg">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="+44 ...">
-        </div>
-
-        <div class="form-row">
-          <div class="fg">
-            <label for="material">Material</label>
-            <select id="material" name="material">
-              <option value="">Select...</option>
-              <option>Mild steel</option>
-              <option>Stainless steel 304</option>
-              <option>Stainless steel 316</option>
-              <option>GRP / fibreglass</option>
-              <option>Not sure — advise me</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label for="atex">ATEX required?</label>
-            <select id="atex" name="atex_zone">
-              <option value="">Select...</option>
-              <option>No</option>
-              <option>Zone 1</option>
-              <option>Zone 2</option>
-              <option>Zone 21</option>
-              <option>Zone 22</option>
-              <option>Not sure</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="fg">
-          <label for="project">Tell us about your project</label>
-          <textarea id="project" name="project_details" placeholder="Dimensions, quantity, IP rating, cable entries, special requirements..." required></textarea>
-        </div>
-
-        <button type="submit" class="form-submit">Request My Quote →</button>
-        <p class="form-note">No obligation. We respond within 24 hours on working days.</p>
-      </form>
-
-      <div class="form-success" id="quote-success">
-        <h4>Quote request received</h4>
-        <p>We'll come back to you within 24 hours on working days. Check your inbox at the email address you provided.</p>
       </div>
     </div>
   </div>
@@ -749,7 +694,7 @@
     <div class="td"></div>
     <div class="ti"><div class="ti-badge">UKCA</div> UK Conformity Assessed</div>
     <div class="td"></div>
-    <div class="ti">UK manufactured — Ashford, Kent</div>
+    <div class="ti">UK manufactured, Ashford, Kent</div>
     <div class="td"></div>
     <div class="ti">15 working day standard lead time</div>
   </div>
@@ -762,11 +707,11 @@
     <h2>Standard sizes never quite fit.<br>Off-the-shelf certs don't always apply.</h2>
     <div class="problem-grid">
       <ul class="problem-list">
-        <li><span class="x-mark">✕</span>Catalogue terminal boxes that are close but need modification on site — adding cost and compromising IP ratings</li>
+        <li><span class="x-mark">✕</span>Catalogue terminal boxes that are close but need modification on site, adding cost and compromising IP ratings</li>
         <li><span class="x-mark">✕</span>Suppliers who quote quickly but can't provide ATEX certification documentation when the site audit arrives</li>
         <li><span class="x-mark">✕</span>Overseas manufacturers with 8–12 week lead times and minimum order quantities that don't suit one-off or small-batch projects</li>
-        <li><span class="x-mark">✕</span>Vague delivery windows that push project timelines — and leave you explaining delays to a client</li>
-        <li><span class="x-mark">✕</span>Receiving a box that's right on paper but wrong in practice — wrong gland positions, wrong cable entry size, wrong mounting arrangement</li>
+        <li><span class="x-mark">✕</span>Vague delivery windows that push project timelines and leave you explaining delays to a client</li>
+        <li><span class="x-mark">✕</span>Receiving a box that's right on paper but wrong in practice: wrong gland positions, wrong cable entry size, wrong mounting arrangement</li>
       </ul>
 
       <div class="solution-card">
@@ -774,8 +719,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c8264f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>How indEx solves this</h3>
-        <p>We manufacture custom terminal boxes to your drawing or specification — not from a catalogue. Every dimension, cable entry position, gland thread, and IP rating is built to what you actually need, not what's nearest on a shelf.</p>
-        <p>Our engineering team reviews your spec before we quote. If we see a problem — a dimension that won't work, a material that's marginal for the environment — we tell you before a pound is spent on manufacture.</p>
+        <p>We manufacture custom terminal boxes to your drawing or specification, not from a catalogue. Every dimension, cable entry position, gland thread, and IP rating is built to what you actually need, not what's nearest on a shelf.</p>
+        <p>Our engineering team reviews your spec before we quote. If we see a problem, a dimension that won't work or a material that's marginal for the environment, we tell you before a pound is spent on manufacture.</p>
         <p>For hazardous area sites, our ATEX-certified terminal boxes are built and documented to Zone 1, Zone 2, Zone 21 and Zone 22 requirements, with full certification packs ready for your site inspection.</p>
         <p>All manufactured in Ashford, Kent. Standard lead time 15 working days from drawing approval.</p>
       </div>
@@ -840,13 +785,13 @@
       <div class="offer-item">
         <div class="offer-num">01</div>
         <h3>Free spec review before you order</h3>
-        <p>Send us your drawing or requirement and our engineering team will check it before we quote. If anything looks marginal or incorrect we'll tell you before manufacture begins — not after.</p>
+        <p>Send us your drawing or requirement and our engineering team will check it before we quote. If anything looks marginal or incorrect we'll tell you before manufacture begins, not after.</p>
       </div>
 
       <div class="offer-item">
         <div class="offer-num">02</div>
         <h3>Quote within 24 hours</h3>
-        <p>We turn around quotations within one working day. You'll receive a full price, lead time, and material specification — not a holding reply asking for a follow-up call.</p>
+        <p>We turn around quotations within one working day. You'll receive a full price, lead time, and material specification, not a holding reply asking for a follow-up call.</p>
       </div>
 
       <div class="offer-item">
@@ -870,7 +815,7 @@
       <div class="offer-item">
         <div class="offer-num">06</div>
         <h3>Modifications included</h3>
-        <p>Cable gland entries, sub-plate mounting, knockouts, terminal rail, earth studs, padlock provisions — all specified at quote stage and built in, not added on site.</p>
+        <p>Cable gland entries, sub-plate mounting, knockouts, terminal rail, earth studs, padlock provisions: all specified at quote stage and built in, not added on site.</p>
       </div>
 
     </div>
@@ -961,49 +906,6 @@
   </div>
 </section>
 
-<!-- MARK -->
-<section class="mark-section" id="mark">
-  <div class="mark-inner">
-    <div>
-      <div class="section-tag">Not sure what you need?</div>
-      <h2>Send Mark your spec.<br>He'll review it free.</h2>
-      <p style="color: var(--steel); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">If you're not certain on material, IP rating, ATEX zone, or whether your dimensions are going to work for your installation — send it to Mark before you commit to anything.</p>
-      <p style="color: var(--steel); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">Mark will come back within 24 hours with a plain-English review of your spec. No sales pitch. If there's a problem with what you've drawn up, he'll tell you. If it's fine, he'll quote it.</p>
-      <p style="color: var(--mute); font-size: 0.875rem;">If after reviewing your spec it makes sense to have a quick call, we'll offer one. You're under no obligation.</p>
-    </div>
-
-    <div class="mark-card">
-      <div class="mark-profile">
-        <div class="mark-avatar">
-          <img src="images/mark-popple.webp"
-               srcset="images/mark-popple.webp 1x, images/mark-popple.jpg 1x"
-               alt="Mark Popple — Terminal Box & ATEX Enclosure Specialist"
-               width="80" height="80">
-        </div>
-        <div>
-          <div class="mark-name">Mark Popple</div>
-          <div class="mark-title">Group Operations Director<br>Terminal Box &amp; ATEX Enclosure Specialist</div>
-        </div>
-      </div>
-
-      <div class="mark-quote">"Nine times out of ten, the spec is fine and we can quote straight from it. But when something looks marginal — a gland size that won't clear, an IP rating that the environment won't support — it's much better to catch it before manufacture than after."</div>
-
-      <form id="mark-form" action="https://formspree.io/f/xeenyjjb" method="POST" class="mark-form">
-        <input type="hidden" name="_subject" value="Spec Review Request — Mark Popple">
-        <input type="email" name="email" class="mark-input" placeholder="Your email address" required>
-        <input type="tel" name="phone" class="mark-input" placeholder="Phone number (optional)">
-        <textarea name="spec_details" class="mark-input" rows="3" placeholder="Brief description of what you need (or attach a drawing by email after submitting)"></textarea>
-        <button type="submit" class="mark-submit">Send Mark My Spec →</button>
-        <p class="mark-note">Reviewed within 24 hours on working days. No obligation.</p>
-      </form>
-
-      <div class="form-success" id="mark-success">
-        <h4>Spec request sent</h4>
-        <p>Mark will review it and come back to you within 24 hours on working days.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- GUARANTEE -->
 <section class="guarantee-section">
@@ -1045,10 +947,10 @@
   <div class="final-inner">
     <div class="section-tag">Ready to get started?</div>
     <h2>Send us your spec today.<br>Quote back within 24 hours.</h2>
-    <p>Upload a drawing, paste your dimensions, or just describe what you need. We'll come back with a price, material recommendation, and lead time — no obligation.</p>
+    <p>Upload a drawing, paste your dimensions, or just describe what you need. We'll come back with a price, material recommendation, and lead time. No obligation.</p>
     <div class="final-btns">
       <a href="#quote" class="btn-white">Submit Your Spec Now</a>
-      <a href="#mark" class="btn-ghost-white">Speak to Mark First</a>
+      <a href="tel:+441233801890" class="btn-ghost-white">Call +44 1233 801 890</a>
     </div>
   </div>
 </div>
@@ -1056,36 +958,29 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <span>© 2026 indEx Enclosures Ltd — 5 Wyvern Way, Ashford, Kent TN24 8DW</span>
-    <span>Company No. 07463154 — Registered in England &amp; Wales</span>
+    <span>© 2026 indEx Enclosures Ltd, 5 Wyvern Way, Ashford, Kent TN24 8DW</span>
+    <span>Company No. 07463154, Registered in England &amp; Wales</span>
     <a href="mailto:sales@indexenclosures.com">sales@indexenclosures.com</a>
   </div>
 </footer>
 
 <script>
-  // Formspree AJAX submission — shows success message without page reload
-  ['quote-form', 'mark-form'].forEach(function(id) {
-    var form = document.getElementById(id);
-    if (!form) return;
-    var successId = id.replace('-form', '-success');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var data = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(res) {
-        if (res.ok) {
-          form.style.display = 'none';
-          document.getElementById(successId).classList.add('visible');
-        } else {
-          alert('Something went wrong. Please email us directly at sales@indexenclosures.com');
-        }
-      }).catch(function() {
-        alert('Could not send. Please email us directly at sales@indexenclosures.com');
-      });
+  var form = document.getElementById('mark-form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('mark-success').classList.add('visible');
+      } else {
+        alert('Something went wrong. Please email us directly at sales@indexenclosures.com');
+      }
+    }).catch(function() {
+      alert('Could not send. Please email us directly at sales@indexenclosures.com');
     });
   });
 </script>
