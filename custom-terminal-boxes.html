@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Terminal Boxes | UK Manufactured | indEx Enclosures</title>
+<meta name="description" content="Custom terminal boxes built to your exact spec. Steel, stainless steel, GRP and ATEX-certified variants. UK-manufactured in Ashford, Kent. Quote within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand-red:      #AB0534;
+    --brand-red-deep: #8A0428;
+    --brand-blue:     #00467F;
+    --ink:            #00355F;
+    --ink-2:          #003F73;
+    --steel:          #2B4A66;
+    --paper:          #F5F2EC;
+    --paper-2:        #EBE6DD;
+    --rule:           #D8D2C6;
+    --rule-dark:      #1B4669;
+    --mute:           #6B6A66;
+    --mute-2:         #8E8C86;
+    --white:          #ffffff;
+    --accent:         #AB0534;
+    --sans: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── NAV ──────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(0, 53, 95, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 64px;
+  }
+
+  .logo {
+    font-family: var(--sans);
+    font-weight: 700; font-size: 1.25rem;
+    letter-spacing: -0.01em; color: var(--white);
+  }
+  .logo span { color: var(--brand-red); }
+
+  .logo-sub {
+    font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45); display: block;
+    margin-top: 1px;
+  }
+
+  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+
+  .nav-phone {
+    font-size: 0.875rem; font-weight: 500;
+    color: rgba(255,255,255,0.75);
+  }
+  .nav-phone strong { color: var(--white); }
+
+  .nav-btn {
+    background: var(--brand-red); color: var(--white);
+    font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.5rem 1.25rem;
+    transition: background 0.15s;
+  }
+  .nav-btn:hover { background: var(--brand-red-deep); }
+
+  /* ── HERO ─────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    padding: 100px 2rem 60px;
+    background: var(--ink);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 60% at 68% 45%, rgba(171,5,52,0.12) 0%, transparent 65%),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.015) 59px, rgba(255,255,255,0.015) 60px),
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.015) 59px, rgba(255,255,255,0.015) 60px);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1140px; margin: 0 auto; width: 100%;
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: #c8264f;
+    background: rgba(171,5,52,0.12);
+    border: 1px solid rgba(171,5,52,0.3);
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1.4rem;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.05; letter-spacing: -0.02em;
+    color: var(--white); margin-bottom: 1.4rem;
+  }
+  h1 em { color: #c8264f; font-style: normal; }
+
+  .hero-sub {
+    font-size: 1.05rem; color: rgba(255,255,255,0.65);
+    line-height: 1.75; max-width: 500px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-ticks {
+    display: flex; flex-direction: column; gap: 0.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tick-item {
+    display: flex; align-items: center; gap: 0.65rem;
+    font-size: 0.9rem; color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  .tick-icon {
+    width: 20px; height: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tick-icon svg { width: 10px; height: 10px; }
+
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--brand-red); color: var(--white);
+    font-weight: 700; font-size: 0.9rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    border: none; cursor: pointer; display: inline-block;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .btn-primary:hover { background: var(--brand-red-deep); transform: translateY(-1px); }
+
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.85);
+    font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    cursor: pointer; display: inline-block;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+
+  /* ── QUOTE CARD ───────────────────────── */
+  .quote-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+    padding: 2rem;
+  }
+
+  .qc-header { margin-bottom: 1.5rem; }
+
+  .qc-title {
+    font-weight: 700; font-size: 1.1rem; color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .qc-sub { font-size: 0.82rem; color: var(--mute); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+  .fg { margin-bottom: 0.75rem; }
+
+  .fg label {
+    display: block;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--mute); margin-bottom: 0.3rem;
+  }
+
+  .fg input, .fg select, .fg textarea {
+    width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    font-family: var(--sans); font-size: 0.875rem;
+    padding: 0.6rem 0.85rem;
+    transition: border-color 0.15s; appearance: none;
+  }
+
+  .fg input:focus, .fg select:focus, .fg textarea:focus {
+    outline: none; border-color: var(--brand-red);
+  }
+
+  .fg select option { background: var(--white); }
+  .fg textarea { resize: vertical; min-height: 70px; }
+
+  .form-submit {
+    width: 100%; background: var(--brand-red); color: var(--white);
+    font-family: var(--sans);
+    font-weight: 700; font-size: 0.9rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.85rem;
+    border: none; cursor: pointer; margin-top: 0.25rem;
+    transition: background 0.15s;
+  }
+  .form-submit:hover { background: var(--brand-red-deep); }
+
+  .form-note {
+    font-size: 0.72rem; color: var(--mute);
+    text-align: center; margin-top: 0.6rem;
+  }
+
+  /* ── SUCCESS STATE ────────────────────── */
+  .form-success {
+    display: none;
+    background: #f0faf5;
+    border: 1px solid #b4dfc8;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .form-success.visible { display: block; }
+  .form-success h4 { color: #1a6640; font-size: 1rem; margin-bottom: 0.4rem; }
+  .form-success p { color: #2e7d52; font-size: 0.875rem; }
+
+  /* ── TRUST BAR ────────────────────────── */
+  .trust-bar {
+    background: var(--paper-2);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem 2rem;
+  }
+
+  .trust-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+
+  .ti {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.02em; color: var(--steel);
+  }
+
+  .ti-badge {
+    background: rgba(171,5,52,0.08);
+    border: 1px solid rgba(171,5,52,0.2);
+    color: var(--brand-red);
+    font-size: 0.65rem; letter-spacing: 0.1em; font-weight: 700;
+    padding: 0.18rem 0.5rem;
+  }
+
+  .td { width: 1px; height: 20px; background: var(--rule); }
+
+  /* ── SECTIONS ─────────────────────────── */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 1140px; margin: 0 auto; }
+  .dark-section { background: var(--ink); }
+  .dark-section .section-tag { color: rgba(255,255,255,0.4); }
+  .dark-section h2 { color: var(--white); }
+
+  .section-tag {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--mute); margin-bottom: 0.9rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.1; color: var(--ink);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-weight: 700; font-size: 1.1rem;
+    color: var(--ink); margin-bottom: 0.5rem;
+  }
+  .dark-section h3 { color: var(--white); }
+
+  /* ── PROBLEMS ─────────────────────────── */
+  .problem-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: start; margin-top: 2rem;
+  }
+
+  .problem-list { list-style: none; }
+
+  .problem-list li {
+    display: flex; gap: 0.9rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.6;
+  }
+  .problem-list li:last-child { border-bottom: none; }
+
+  .x-mark {
+    color: #e84040; font-weight: 800; font-size: 1rem;
+    flex-shrink: 0; margin-top: 0.15rem;
+  }
+
+  .solution-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2.2rem;
+  }
+
+  .solution-card .s-icon {
+    width: 52px; height: 52px;
+    background: rgba(171,5,52,0.15); border: 1px solid rgba(171,5,52,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.4rem;
+  }
+
+  .solution-card p { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 1rem; }
+  .solution-card p:last-child { margin-bottom: 0; }
+
+  /* ── VARIANTS ─────────────────────────── */
+  .variants-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem; margin-top: 2.5rem;
+  }
+
+  .variant-card {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    padding: 1.6rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .variant-card:hover { border-color: var(--brand-red); box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+
+  .variant-card.featured {
+    border-color: var(--brand-red);
+    background: rgba(171,5,52,0.04);
+  }
+
+  .v-icon {
+    width: 44px; height: 44px;
+    background: rgba(171,5,52,0.08); border: 1px solid rgba(171,5,52,0.2);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .v-tag {
+    display: inline-block;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--brand-red); background: rgba(171,5,52,0.08);
+    border: 1px solid rgba(171,5,52,0.2);
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .variant-card p { font-size: 0.85rem; color: var(--mute); line-height: 1.6; }
+
+  /* ── OFFER STACK ──────────────────────── */
+  .offer-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+
+  .offer-item {
+    padding: 1.75rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: border-color 0.2s;
+  }
+  .offer-item:hover { border-color: rgba(171,5,52,0.4); }
+
+  .offer-num {
+    font-weight: 800; font-size: 2.8rem;
+    color: rgba(255,255,255,0.06); line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .offer-item h3 { color: rgba(255,255,255,0.9); }
+  .offer-item p { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+  /* ── MARK SECTION ─────────────────────── */
+  .mark-section { background: var(--paper-2); }
+
+  .mark-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1.15fr;
+    gap: 4rem; align-items: center;
+  }
+
+  .mark-section .section-tag { color: var(--mute); }
+  .mark-section h2 { color: var(--ink); }
+
+  .mark-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    padding: 2rem;
+  }
+
+  .mark-profile {
+    display: flex; align-items: center; gap: 1.25rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .mark-avatar {
+    width: 80px; height: 80px;
+    border: 2px solid var(--rule);
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--paper-2);
+  }
+
+  .mark-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
+    display: block;
+  }
+
+  .mark-name {
+    font-weight: 700; font-size: 1.1rem; color: var(--ink);
+  }
+
+  .mark-title { font-size: 0.82rem; color: var(--mute); margin-top: 0.2rem; line-height: 1.4; }
+
+  .mark-quote {
+    font-size: 0.9rem; color: var(--steel); line-height: 1.75;
+    font-style: italic;
+    border-left: 3px solid var(--brand-red);
+    padding-left: 1rem; margin-bottom: 1.5rem;
+  }
+
+  .mark-form { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .mark-input {
+    background: var(--paper); border: 1px solid var(--rule);
+    color: var(--ink); font-family: var(--sans); font-size: 0.875rem;
+    padding: 0.65rem 0.9rem; width: 100%;
+    transition: border-color 0.15s;
+  }
+  .mark-input:focus { outline: none; border-color: var(--brand-red); }
+
+  .mark-submit {
+    background: var(--ink); color: var(--white);
+    font-family: var(--sans);
+    font-weight: 700; font-size: 0.875rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.85rem;
+    border: none; cursor: pointer;
+    transition: background 0.15s;
+  }
+  .mark-submit:hover { background: var(--brand-red); }
+
+  .mark-note { font-size: 0.72rem; color: var(--mute); text-align: center; }
+
+  /* ── GUARANTEE ────────────────────────── */
+  .guarantee-section { background: var(--paper); }
+
+  .guarantee-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+
+  .g-card {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    padding: 1.75rem;
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+
+  .g-icon {
+    width: 48px; height: 48px;
+    background: rgba(0,70,127,0.07);
+    border: 1px solid rgba(0,70,127,0.15);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .g-card p { font-size: 0.875rem; color: var(--mute); line-height: 1.7; }
+
+  /* ── SPECS TABLE ──────────────────────── */
+  .specs-section { background: var(--ink); }
+  .specs-section .section-tag { color: rgba(255,255,255,0.35); }
+  .specs-section h2 { color: var(--white); }
+
+  .specs-table {
+    width: 100%; border-collapse: collapse;
+    margin-top: 2.5rem; font-size: 0.875rem;
+  }
+
+  .specs-table th {
+    font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; font-size: 0.72rem;
+    color: rgba(255,255,255,0.35); text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .specs-table td {
+    padding: 0.85rem 1rem; color: rgba(255,255,255,0.65);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .specs-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .specs-table .check { color: #3fcf8e; font-weight: 700; }
+  .specs-table .dash { color: rgba(255,255,255,0.2); }
+
+  /* ── FINAL CTA ────────────────────────── */
+  .final-cta {
+    background: var(--brand-red);
+  }
+
+  .final-inner {
+    max-width: 1140px; margin: 0 auto;
+    text-align: center; padding: 5rem 2rem;
+  }
+
+  .final-inner .section-tag { color: rgba(255,255,255,0.6); }
+  .final-inner h2 { color: var(--white); margin-bottom: 1rem; }
+  .final-inner p { color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 520px; margin: 0 auto 2.5rem; }
+
+  .final-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn-white {
+    background: var(--white); color: var(--brand-red);
+    font-weight: 700; font-size: 0.875rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    border: none; cursor: pointer; display: inline-block;
+    transition: background 0.15s;
+  }
+  .btn-white:hover { background: var(--paper); }
+
+  .btn-ghost-white {
+    border: 1px solid rgba(255,255,255,0.4); color: var(--white);
+    font-weight: 600; font-size: 0.875rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    cursor: pointer; display: inline-block;
+    transition: background 0.15s;
+  }
+  .btn-ghost-white:hover { background: rgba(255,255,255,0.1); }
+
+  /* ── FOOTER ───────────────────────────── */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 1.75rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.4);
+  }
+
+  .footer-inner a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── RESPONSIVE ───────────────────────── */
+  @media (max-width: 900px) {
+    .hero-inner, .problem-grid, .mark-inner { grid-template-columns: 1fr; }
+    .variants-grid { grid-template-columns: 1fr 1fr; }
+    .offer-grid, .guarantee-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .variants-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .trust-inner { flex-direction: column; align-items: flex-start; }
+    .td { display: none; }
+    .nav-phone { display: none; }
+    .final-btns { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div>
+    <div class="logo">ind<span>Ex</span></div>
+    <span class="logo-sub">Custom Electrical Enclosures</span>
+  </div>
+  <div class="nav-right">
+    <span class="nav-phone"><strong>+44 1233 801 890</strong> — Mon–Fri 8am–5pm</span>
+    <a href="#quote" class="nav-btn">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"/></svg>
+        UK Manufacturer — Ashford, Kent
+      </div>
+      <h1>Custom Terminal Boxes.<br><em>Built to Your Exact Spec.</em></h1>
+      <p class="hero-sub">Steel, stainless steel, GRP and ATEX-certified terminal boxes manufactured to your drawing or specification. Quote within 24 hours. Delivered in 15 working days.</p>
+
+      <div class="hero-ticks">
+        <div class="tick-item">
+          <div class="tick-icon">
+            <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#3fcf8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Send us your drawing — we quote within 24 hours
+        </div>
+        <div class="tick-item">
+          <div class="tick-icon">
+            <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#3fcf8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Standard builds dispatched in 15 working days
+        </div>
+        <div class="tick-item">
+          <div class="tick-icon">
+            <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#3fcf8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          ATEX-certified variants — Zone 1, Zone 2, Zone 21, Zone 22
+        </div>
+        <div class="tick-item">
+          <div class="tick-icon">
+            <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#3fcf8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Full documentation pack included as standard
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#quote" class="btn-primary">Submit Your Spec</a>
+        <a href="#mark" class="btn-ghost">Speak to an Engineer</a>
+      </div>
+    </div>
+
+    <!-- QUOTE FORM -->
+    <div class="quote-card" id="quote">
+      <div class="qc-header">
+        <div class="qc-title">Get a quote — 24hr turnaround</div>
+        <div class="qc-sub">Send your spec or drawing and we'll come back with a price and lead time.</div>
+      </div>
+
+      <form id="quote-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="Custom Terminal Box Quote Request">
+        <input type="hidden" name="_replyto" value="">
+
+        <div class="form-row">
+          <div class="fg">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Alex" required>
+          </div>
+          <div class="fg">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Your company" required>
+        </div>
+
+        <div class="fg">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="alex@company.com" required>
+        </div>
+
+        <div class="fg">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+44 ...">
+        </div>
+
+        <div class="form-row">
+          <div class="fg">
+            <label for="material">Material</label>
+            <select id="material" name="material">
+              <option value="">Select...</option>
+              <option>Mild steel</option>
+              <option>Stainless steel 304</option>
+              <option>Stainless steel 316</option>
+              <option>GRP / fibreglass</option>
+              <option>Not sure — advise me</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="atex">ATEX required?</label>
+            <select id="atex" name="atex_zone">
+              <option value="">Select...</option>
+              <option>No</option>
+              <option>Zone 1</option>
+              <option>Zone 2</option>
+              <option>Zone 21</option>
+              <option>Zone 22</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label for="project">Tell us about your project</label>
+          <textarea id="project" name="project_details" placeholder="Dimensions, quantity, IP rating, cable entries, special requirements..." required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Request My Quote →</button>
+        <p class="form-note">No obligation. We respond within 24 hours on working days.</p>
+      </form>
+
+      <div class="form-success" id="quote-success">
+        <h4>Quote request received</h4>
+        <p>We'll come back to you within 24 hours on working days. Check your inbox at the email address you provided.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="ti"><div class="ti-badge">ATEX</div> Zone 1 &amp; Zone 2 certified</div>
+    <div class="td"></div>
+    <div class="ti"><div class="ti-badge">IECEx</div> International certification</div>
+    <div class="td"></div>
+    <div class="ti"><div class="ti-badge">IP66/67/68</div> All ratings available</div>
+    <div class="td"></div>
+    <div class="ti"><div class="ti-badge">UKCA</div> UK Conformity Assessed</div>
+    <div class="td"></div>
+    <div class="ti">UK manufactured — Ashford, Kent</div>
+    <div class="td"></div>
+    <div class="ti">15 working day standard lead time</div>
+  </div>
+</div>
+
+<!-- PROBLEM / SOLUTION -->
+<section class="dark-section">
+  <div class="section-inner">
+    <div class="section-tag">Why custom terminal boxes are hard to get right</div>
+    <h2>Standard sizes never quite fit.<br>Off-the-shelf certs don't always apply.</h2>
+    <div class="problem-grid">
+      <ul class="problem-list">
+        <li><span class="x-mark">✕</span>Catalogue terminal boxes that are close but need modification on site — adding cost and compromising IP ratings</li>
+        <li><span class="x-mark">✕</span>Suppliers who quote quickly but can't provide ATEX certification documentation when the site audit arrives</li>
+        <li><span class="x-mark">✕</span>Overseas manufacturers with 8–12 week lead times and minimum order quantities that don't suit one-off or small-batch projects</li>
+        <li><span class="x-mark">✕</span>Vague delivery windows that push project timelines — and leave you explaining delays to a client</li>
+        <li><span class="x-mark">✕</span>Receiving a box that's right on paper but wrong in practice — wrong gland positions, wrong cable entry size, wrong mounting arrangement</li>
+      </ul>
+
+      <div class="solution-card">
+        <div class="s-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c8264f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>How indEx solves this</h3>
+        <p>We manufacture custom terminal boxes to your drawing or specification — not from a catalogue. Every dimension, cable entry position, gland thread, and IP rating is built to what you actually need, not what's nearest on a shelf.</p>
+        <p>Our engineering team reviews your spec before we quote. If we see a problem — a dimension that won't work, a material that's marginal for the environment — we tell you before a pound is spent on manufacture.</p>
+        <p>For hazardous area sites, our ATEX-certified terminal boxes are built and documented to Zone 1, Zone 2, Zone 21 and Zone 22 requirements, with full certification packs ready for your site inspection.</p>
+        <p>All manufactured in Ashford, Kent. Standard lead time 15 working days from drawing approval.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VARIANTS -->
+<section>
+  <div class="section-inner">
+    <div class="section-tag">What we build</div>
+    <h2>Four material families.<br>All built to your spec.</h2>
+    <div class="variants-grid">
+
+      <div class="variant-card">
+        <div class="v-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="1" stroke="#AB0534" stroke-width="1.5"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke="#AB0534" stroke-width="1"/></svg>
+        </div>
+        <div class="v-tag">Mild Steel</div>
+        <h3>Steel Terminal Boxes</h3>
+        <p>Powder-coated mild steel for industrial indoor and sheltered outdoor installations. Cost-effective, robust, fast to manufacture. Standard IP66 rating. RAL colour options available.</p>
+      </div>
+
+      <div class="variant-card featured">
+        <div class="v-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="1" stroke="#AB0534" stroke-width="1.5"/><path d="M3 9h18M9 3v18" stroke="#AB0534" stroke-width="1"/><circle cx="16" cy="16" r="3" stroke="#AB0534" stroke-width="1.2"/></svg>
+        </div>
+        <div class="v-tag">Most Specified</div>
+        <h3>Stainless Steel</h3>
+        <p>304 or 316 stainless for wash-down environments, coastal installations, food and pharmaceutical applications. Superior corrosion resistance where mild steel isn't suitable. IP66/67/68 options.</p>
+      </div>
+
+      <div class="variant-card">
+        <div class="v-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="#AB0534" stroke-width="1.5"/><path d="M3 12h18M12 3c-2.5 3-4 5.8-4 9s1.5 6 4 9" stroke="#AB0534" stroke-width="1"/></svg>
+        </div>
+        <div class="v-tag">GRP / Fibreglass</div>
+        <h3>GRP Terminal Boxes</h3>
+        <p>Glass reinforced polyester for chemical, water treatment, and corrosive environments. Lighter than steel, excellent UV and chemical resistance. Ideal for outdoor and coastal plant.</p>
+      </div>
+
+      <div class="variant-card">
+        <div class="v-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.5 4h4.5l-3.5 2.5 1.5 4L12 10l-3.5 2.5 1.5-4L6.5 6H11z" stroke="#AB0534" stroke-width="1.3"/><circle cx="12" cy="16" r="5" stroke="#AB0534" stroke-width="1.5"/><path d="M9 16l2 2 4-4" stroke="#AB0534" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="v-tag">ATEX Certified</div>
+        <h3>ATEX Terminal Boxes</h3>
+        <p>Zone 1, Zone 2, Zone 21 &amp; Zone 22 certified terminal boxes with full IECEx / ATEX documentation. Built for hazardous area installations in oil &amp; gas, chemical, water treatment, and pharmaceutical sites.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OFFER STACK -->
+<section class="dark-section">
+  <div class="section-inner">
+    <div class="section-tag">What you get</div>
+    <h2>More than a box.<br>A complete solution.</h2>
+    <div class="offer-grid">
+
+      <div class="offer-item">
+        <div class="offer-num">01</div>
+        <h3>Free spec review before you order</h3>
+        <p>Send us your drawing or requirement and our engineering team will check it before we quote. If anything looks marginal or incorrect we'll tell you before manufacture begins — not after.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-num">02</div>
+        <h3>Quote within 24 hours</h3>
+        <p>We turn around quotations within one working day. You'll receive a full price, lead time, and material specification — not a holding reply asking for a follow-up call.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-num">03</div>
+        <h3>15 working day manufacture</h3>
+        <p>Standard custom terminal boxes dispatched within 15 working days of drawing approval. Express options available for urgent projects. We commit to a date and we keep it.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-num">04</div>
+        <h3>Full documentation pack</h3>
+        <p>Every order ships with material certificates, dimensional records, IP test documentation, and for ATEX orders, full certification documentation ready for site inspection.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-num">05</div>
+        <h3>UK-manufactured, UK-stocked</h3>
+        <p>Manufactured in Ashford, Kent. No customs delays, no minimum order quantities, no translation issues. One point of contact from enquiry to delivery.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-num">06</div>
+        <h3>Modifications included</h3>
+        <p>Cable gland entries, sub-plate mounting, knockouts, terminal rail, earth studs, padlock provisions — all specified at quote stage and built in, not added on site.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPECS TABLE -->
+<section class="specs-section">
+  <div class="section-inner">
+    <div class="section-tag">Specifications</div>
+    <h2>What we can build.</h2>
+    <table class="specs-table">
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Steel</th>
+          <th>Stainless</th>
+          <th>GRP</th>
+          <th>ATEX</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>IP rating</td>
+          <td>Up to IP66</td>
+          <td>Up to IP68</td>
+          <td>Up to IP67</td>
+          <td>Up to IP66</td>
+        </tr>
+        <tr>
+          <td>ATEX certification</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="check">Zone 1, 2, 21, 22</td>
+        </tr>
+        <tr>
+          <td>IECEx certification</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="check">Available</td>
+        </tr>
+        <tr>
+          <td>Custom dimensions</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+        </tr>
+        <tr>
+          <td>Cable gland entries</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+        </tr>
+        <tr>
+          <td>Terminal rail / DIN rail</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+        </tr>
+        <tr>
+          <td>Material certificate</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+        </tr>
+        <tr>
+          <td>Standard lead time</td>
+          <td>15 working days</td>
+          <td>15 working days</td>
+          <td>15 working days</td>
+          <td>15 working days</td>
+        </tr>
+        <tr>
+          <td>Minimum order</td>
+          <td>1 unit</td>
+          <td>1 unit</td>
+          <td>1 unit</td>
+          <td>1 unit</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- MARK -->
+<section class="mark-section" id="mark">
+  <div class="mark-inner">
+    <div>
+      <div class="section-tag">Not sure what you need?</div>
+      <h2>Send Mark your spec.<br>He'll review it free.</h2>
+      <p style="color: var(--steel); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">If you're not certain on material, IP rating, ATEX zone, or whether your dimensions are going to work for your installation — send it to Mark before you commit to anything.</p>
+      <p style="color: var(--steel); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">Mark will come back within 24 hours with a plain-English review of your spec. No sales pitch. If there's a problem with what you've drawn up, he'll tell you. If it's fine, he'll quote it.</p>
+      <p style="color: var(--mute); font-size: 0.875rem;">If after reviewing your spec it makes sense to have a quick call, we'll offer one. You're under no obligation.</p>
+    </div>
+
+    <div class="mark-card">
+      <div class="mark-profile">
+        <div class="mark-avatar">
+          <img src="images/mark-popple.webp"
+               srcset="images/mark-popple.webp 1x, images/mark-popple.jpg 1x"
+               alt="Mark Popple — Terminal Box & ATEX Enclosure Specialist"
+               width="80" height="80">
+        </div>
+        <div>
+          <div class="mark-name">Mark Popple</div>
+          <div class="mark-title">Group Operations Director<br>Terminal Box &amp; ATEX Enclosure Specialist</div>
+        </div>
+      </div>
+
+      <div class="mark-quote">"Nine times out of ten, the spec is fine and we can quote straight from it. But when something looks marginal — a gland size that won't clear, an IP rating that the environment won't support — it's much better to catch it before manufacture than after."</div>
+
+      <form id="mark-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" class="mark-form">
+        <input type="hidden" name="_subject" value="Spec Review Request — Mark Popple">
+        <input type="email" name="email" class="mark-input" placeholder="Your email address" required>
+        <input type="tel" name="phone" class="mark-input" placeholder="Phone number (optional)">
+        <textarea name="spec_details" class="mark-input" rows="3" placeholder="Brief description of what you need (or attach a drawing by email after submitting)"></textarea>
+        <button type="submit" class="mark-submit">Send Mark My Spec →</button>
+        <p class="mark-note">Reviewed within 24 hours on working days. No obligation.</p>
+      </form>
+
+      <div class="form-success" id="mark-success">
+        <h4>Spec request sent</h4>
+        <p>Mark will review it and come back to you within 24 hours on working days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee-section">
+  <div class="section-inner">
+    <div class="section-tag">Our commitment to you</div>
+    <h2>Three guarantees.<br>Every order.</h2>
+    <div class="guarantee-grid">
+
+      <div class="g-card">
+        <div class="g-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="#00467F" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Spec guarantee</h3>
+        <p>If we manufacture to your approved drawing and the box doesn't match what we quoted, we remake it at our cost. No argument, no lead time debate.</p>
+      </div>
+
+      <div class="g-card">
+        <div class="g-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#00467F" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#00467F" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Lead time guarantee</h3>
+        <p>We commit to a dispatch date at the time of order. If we miss it through our own fault, we'll discount your next order. We don't give vague windows.</p>
+      </div>
+
+      <div class="g-card">
+        <div class="g-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#00467F" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Certification guarantee</h3>
+        <p>For ATEX orders, if your box fails site inspection due to a certification error on our part, we resolve it at our cost. Your project timeline is our responsibility too.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <div class="final-inner">
+    <div class="section-tag">Ready to get started?</div>
+    <h2>Send us your spec today.<br>Quote back within 24 hours.</h2>
+    <p>Upload a drawing, paste your dimensions, or just describe what you need. We'll come back with a price, material recommendation, and lead time — no obligation.</p>
+    <div class="final-btns">
+      <a href="#quote" class="btn-white">Submit Your Spec Now</a>
+      <a href="#mark" class="btn-ghost-white">Speak to Mark First</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 indEx Enclosures Ltd — 5 Wyvern Way, Ashford, Kent TN24 8DW</span>
+    <span>Company No. 07463154 — Registered in England &amp; Wales</span>
+    <a href="mailto:sales@indexenclosures.com">sales@indexenclosures.com</a>
+  </div>
+</footer>
+
+<script>
+  // Formspree AJAX submission — shows success message without page reload
+  ['quote-form', 'mark-form'].forEach(function(id) {
+    var form = document.getElementById(id);
+    if (!form) return;
+    var successId = id.replace('-form', '-success');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById(successId).classList.add('visible');
+        } else {
+          alert('Something went wrong. Please email us directly at sales@indexenclosures.com');
+        }
+      }).catch(function() {
+        alert('Could not send. Please email us directly at sales@indexenclosures.com');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
