@@ -6,6 +6,14 @@
 <title>Custom Terminal Boxes | UK Manufactured | indEx Enclosures</title>
 <meta name="description" content="Custom terminal boxes built to your exact spec. Steel, stainless steel, GRP and ATEX-certified variants. UK-manufactured in Ashford, Kent. Quote within 24 hours.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Google Ads conversion tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1061977920"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-1061977920');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -662,13 +670,13 @@
           </div>
         </div>
 
-        <div class="mark-quote">"Nine times out of ten, the spec is fine and we can quote straight from it. But when something looks borderline, it's much better to catch it before manufacture than after."</div>
+        <div class="mark-quote">"Nine times out of ten, the spec is fine and we can quote straight from it. But when something looks like it needs questioning, it's much better to catch it before manufacture than after."</div>
 
         <form id="mark-form" action="https://formspree.io/f/xeenyjjb" method="POST" class="mark-form">
           <input type="hidden" name="_subject" value="Spec Review Request">
           <input type="email" name="email" class="mark-input" placeholder="Your email address" required>
           <input type="tel" name="phone" class="mark-input" placeholder="Phone number (optional)">
-          <textarea name="spec_details" class="mark-input" rows="3" placeholder="Brief description of what you need (or attach a drawing by email after submitting)"></textarea>
+          <textarea name="spec_details" class="mark-input" rows="3" placeholder="Brief description of what you need"></textarea>
           <button type="submit" class="mark-submit">Send Mark My Spec</button>
           <p class="mark-note">Reviewed within 24 hours on working days. No obligation.</p>
         </form>
@@ -716,7 +724,7 @@
     <div class="problem-grid">
       <ul class="problem-list">
         <li><span class="x-mark">✕</span>Catalogue terminal boxes that are close but need modification on site, adding cost and compromising IP ratings</li>
-        <li><span class="x-mark">✕</span>Suppliers who quote quickly but can't provide ATEX certification documentation when the site audit arrives</li>
+        <li><span class="x-mark">✕</span>Suppliers who quote quickly but can't provide ATEX certification documentation</li>
         <li><span class="x-mark">✕</span>Overseas manufacturers with 8–12 week lead times and minimum order quantities that don't suit one-off or small-batch projects</li>
         <li><span class="x-mark">✕</span>Vague delivery windows that push project timelines and leave you explaining delays to a client</li>
         <li><span class="x-mark">✕</span>Receiving a box that's right on paper but wrong in practice: wrong gland positions, wrong cable entry size, wrong mounting arrangement</li>
@@ -749,7 +757,7 @@
         </div>
         <div class="v-tag">Mild Steel</div>
         <h3>Steel Terminal Boxes</h3>
-        <p>Powder-coated mild steel for industrial indoor and sheltered outdoor installations. Cost-effective, robust, fast to manufacture. Standard IP66 rating. RAL colour options available.</p>
+        <p>Powder-coated mild steel for industrial indoor and sheltered outdoor installations. Cost-effective, robust, fast to manufacture. Standard IP66 rating (IP68 on request). RAL colour options available.</p>
       </div>
 
       <div class="variant-card featured">
@@ -758,7 +766,7 @@
         </div>
         <div class="v-tag">Most Specified</div>
         <h3>Stainless Steel</h3>
-        <p>304 or 316 stainless for wash-down environments, coastal installations, food and pharmaceutical applications. Superior corrosion resistance where mild steel isn't suitable. IP66 standard, IP68 on demand.</p>
+        <p>304 or 316 stainless for wash-down environments, coastal installations, food and pharmaceutical applications. Superior corrosion resistance where mild steel isn't suitable. IP66 standard, IP68 on request.</p>
       </div>
 
       <div class="variant-card">
@@ -811,7 +819,7 @@
       <div class="offer-item">
         <div class="offer-num">04</div>
         <h3>Full documentation pack</h3>
-        <p>Every order ships with material certificates, dimensional records, IP test documentation, and for ATEX orders, full certification documentation ready for site inspection.</p>
+        <p>Certification documentation is available with every order.</p>
       </div>
 
       <div class="offer-item">
@@ -842,7 +850,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="#00467F" stroke-width="1.5" stroke-linejoin="round"/></svg>
         </div>
         <h3>Spec guarantee</h3>
-        <p>If we manufacture to your approved drawing and the box doesn't match what we quoted, we remake it at our cost. No argument, no lead time debate.</p>
+        <p>If we manufacture to your approved drawing and the box doesn't match, we remake it at our cost. No argument, no lead time debate.</p>
       </div>
 
       <div class="g-card">
@@ -899,6 +907,7 @@
       if (res.ok) {
         form.style.display = 'none';
         document.getElementById('mark-success').classList.add('visible');
+        gtag('event', 'conversion', { send_to: 'AW-1061977920/GO0wCNj-rLAcEMD-sfoD' });
       } else {
         alert('Something went wrong. Please email us directly at sales@indexenclosures.com');
       }
