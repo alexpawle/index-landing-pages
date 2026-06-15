@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>indEx - We appreciate your business</title>
+  <style>
+    :root {
+      --navy: #070d4f;
+      --blue: #0057e7;
+      --green: #008b4f;
+      --purple: #5700c8;
+      --light: #f7f9ff;
+      --border: #d9deef;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--navy);
+      background:
+        radial-gradient(circle at top left, #eef6ff 0 12%, transparent 13%),
+        radial-gradient(circle at right 40%, #eef6ff 0 10%, transparent 11%),
+        linear-gradient(180deg, #ffffff 0%, #fbfcff 60%, #f7fbff 100%);
+    }
+
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 22px 32px 48px;
+      position: relative;
+    }
+
+    header { text-align: center; }
+
+    .logo-img {
+      display: block;
+      width: min(260px, 70vw);
+      height: auto;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(40px, 6vw, 62px);
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 22px;
+      font-size: 25px;
+      line-height: 1.35;
+    }
+
+    .heart-sketch {
+      position: absolute;
+      right: 10%;
+      top: 118px;
+      font-size: 72px;
+      color: #e40024;
+      transform: rotate(12deg);
+      line-height: 1;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: center;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-size: 24px;
+      margin: 18px 0 12px;
+    }
+
+    .section-title:before,
+    .section-title:after {
+      content: "";
+      height: 2px;
+      width: 250px;
+      background: var(--border);
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin: 0 auto 18px;
+      max-width: 960px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 22px rgba(7, 13, 79, 0.14);
+      padding: 22px 42px 18px;
+      text-align: center;
+    }
+
+    .google-g {
+      font-size: 70px;
+      font-weight: 700;
+      color: #4285f4;
+    }
+
+    .trust-star {
+      color: #00a66a;
+      font-size: 76px;
+      line-height: 1;
+    }
+
+    .card h2 {
+      margin: 10px 0 8px;
+      font-size: 26px;
+    }
+
+    .card p {
+      margin: 0 auto 18px;
+      font-size: 19px;
+      line-height: 1.35;
+      max-width: 320px;
+    }
+
+    .stars {
+      color: #ffb000;
+      font-size: 36px;
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+    }
+
+    .trust-stars {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin: 0 0 18px;
+    }
+
+    .trust-stars span {
+      background: #008a51;
+      color: white;
+      width: 43px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+      border: 0;
+      color: #fff;
+      border-radius: 8px;
+      padding: 13px 18px;
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn.blue { background: linear-gradient(180deg, #0966f6, #004bd4); }
+    .btn.green { background: linear-gradient(180deg, #009556, #007642); }
+    .btn.purple { background: linear-gradient(90deg, #6100d4, #5300c7); }
+
+    .impact {
+      text-align: center;
+      font-size: 23px;
+      line-height: 1.25;
+      font-weight: 800;
+      max-width: 850px;
+      margin: 8px auto 20px;
+    }
+
+    .nominate {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 42px;
+      border: 1px solid #cdbdf4;
+      border-radius: 18px;
+      padding: 24px 32px 20px;
+      background: linear-gradient(120deg, #fbf8ff, #ffffff);
+      margin: 0 auto 24px;
+      max-width: 1080px;
+    }
+
+    .nominate-left {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .gift {
+      width: 110px;
+      height: 110px;
+      border: 3px solid var(--purple);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 58px;
+      color: var(--purple);
+    }
+
+    .eyebrow {
+      color: #2d13bf;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .nominate h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      line-height: .98;
+      margin: 0 0 24px;
+    }
+
+    .nominate p {
+      font-size: 17px;
+      line-height: 1.45;
+      margin: 0 0 20px;
+    }
+
+    form label {
+      display: block;
+      font-weight: 900;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid #c4c8d8;
+      border-radius: 9px;
+      padding: 14px 16px;
+      font-size: 18px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    textarea { min-height: 92px; resize: vertical; }
+
+    .counter {
+      text-align: right;
+      margin-top: -38px;
+      padding-right: 12px;
+      margin-bottom: 14px;
+      color: #334;
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    .donations {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .donation-copy .green-label {
+      color: #00773d;
+      font-size: 19px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .donation-copy h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      line-height: 1.02;
+      margin: 10px 0 18px;
+    }
+
+    .donation-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 16px rgba(7,13,79,.12);
+      padding: 20px 26px;
+      max-width: 500px;
+      min-height: 150px;
+    }
+
+    .donation-card > div:first-child {
+      border-right: 2px solid #d1d5e2;
+    }
+
+    .donation-card p { font-size: 17px; margin: 8px 0; }
+    .pound { color: #00884b; font-size: 42px; font-weight: 900; margin-top: 18px; }
+    .pilgrims { font-size: 30px; color: #5514b8; font-weight: 900; margin-top: 20px; }
+
+    .quote-card {
+      min-height: 350px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #e8f7ef 0%, #f4f8ff 100%);
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+    }
+
+    .quote-card::before{
+      content:"❤";
+      position:absolute;
+      top:40px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:120px;
+      color:rgba(0,139,79,.15);
+    }
+
+    .quote-card::after{
+      content:"Giving Back";
+      position:absolute;
+      top:175px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:34px;
+      font-weight:700;
+      color:rgba(7,13,79,.25);
+      letter-spacing:1px;
+    }
+
+    .quote {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 20px;
+      background: rgba(0, 102, 121, .93);
+      color: #fff;
+      border-radius: 14px;
+      padding: 18px 30px;
+      font-size: 24px;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .quote:before {
+      content: "\201C";
+      position: absolute;
+      left: 18px;
+      top: -8px;
+      font-size: 80px;
+      opacity: .75;
+      font-family: Georgia, serif;
+    }
+
+    @media (max-width: 850px) {
+      .page { padding: 20px; }
+      .review-grid,
+      .nominate,
+      .donations {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title:before,
+      .section-title:after { width: 70px; }
+
+      .nominate-left { grid-template-columns: 1fr; }
+      .heart-sketch { display: none; }
+      .card { padding: 22px; }
+      .intro { font-size: 20px; }
+      .quote { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <img class="logo-img" src="https://indexenclosures.com/images/index-logo.webp" alt="indEx logo">
+      <div class="heart-sketch">♡</div>
+      <h1>We appreciate your business!</h1>
+      <p class="intro">Your support means the world to us. If you had a great experience, we'd love if you could share it with others.</p>
+    </header>
+
+    <div class="section-title">LEAVE US A REVIEW</div>
+
+    <section class="review-grid">
+      <article class="card">
+        <div class="google-g">G</div>
+        <h2>Review us on Google</h2>
+        <p>Your feedback helps us grow and helps others find us.</p>
+        <div class="stars">★★★★★</div>
+        <a class="btn blue" href="https://g.page/r/CUWg2uYW5JVzEBM/review" target="_blank" rel="noopener noreferrer" aria-label="Leave a Google Review">↗ Leave a Google Review</a>
+      </article>
+
+      <article class="card">
+        <div class="trust-star">★</div>
+        <h2>Review us on Trustpilot</h2>
+        <p>Your review helps build trust with future customers.</p>
+        <div class="trust-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <a class="btn green" href="https://www.trustpilot.com/review/indexenclosures.com" target="_blank" rel="noopener noreferrer" aria-label="Leave a Trustpilot Review">↗ Leave a Trustpilot Review</a>
+      </article>
+    </section>
+
+    <p class="impact">♡<br>Your feedback helps us grow, and your charity nomination helps us give back.<br>
+      Together, we're making a positive impact. Thank you for your support.
+    </p>
+
+    <section class="nominate">
+      <div class="nominate-left">
+        <div class="gift">🎁</div>
+        <div>
+          <div class="eyebrow">Help us give back</div>
+          <h2>Nominate a charity<br>you care about</h2>
+          <p>Each month, we hold a prize draw and donate to one nominated charity.</p>
+          <p>Submit a charity for a chance for them to be our next winner!</p>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/mbdewdrr" method="POST">
+        <input type="hidden" name="form_type" value="Charity Nomination">
+        <label for="charity">Enter a charity into the prize draw</label>
+        <input id="charity" name="charity_name" placeholder="Charity name" required />
+        <textarea id="reason" name="charity_reason" maxlength="250" placeholder="Why should we support this charity?&#10;(Optional)"></textarea>
+        <div class="counter" id="counter">0/250</div>
+        <button class="btn purple" type="submit">♡ Submit Charity</button>
+      </form>
+    </section>
+
+    <section class="donations">
+      <div class="donation-copy">
+        <div class="green-label">Making a difference together</div>
+        <h2>Our charitable donations<br>this month</h2>
+
+        <div class="donation-card">
+          <div>
+            <div style="font-size:30px;color:#00884b;text-align:center;">♥</div>
+            <p>Total donated this month</p>
+            <div class="pound">£</div>
+          </div>
+          <div style="padding-left:28px;">
+            <p>Proudly supporting:</p>
+            <div class="pilgrims">Pilgrims<br>Hospices</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote">
+          Our prime purpose in this life is to help others. And if you can't help them, at least don't hurt them.<br>
+          <span style="font-style:normal;">– Dalai Lama</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const reason = document.getElementById('reason');
+    const counter = document.getElementById('counter');
+
+    if (reason && counter) {
+      reason.addEventListener('input', function () {
+        counter.textContent = reason.value.length + '/250';
+      });
+    }
+  </script>
+</body>
+</html>
